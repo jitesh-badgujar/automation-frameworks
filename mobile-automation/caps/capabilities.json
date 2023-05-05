@@ -1,0 +1,44 @@
+{
+  "android": {
+    "platformName": "android",
+    "app": {
+      "local": "./build/best_online_shopping_app.apk"
+    },
+    "appPackage": "com.arvindkum75.Best_Online_Shopping",
+    "appActivity": "com.arvindkum75.Best_Online_Shopping.Screen1",
+    "automationName": "UIAutomator2",
+    "noSign": true
+  },
+  "iOS": {
+    "platformName": "iOS",
+    "app": {
+      "simulator": "./build/<app_name>"
+    },
+    "deviceName": "iPhone",
+    "wdaLaunchTimeout": 80000,
+    "wdaConnectionTimeout": 80000,
+    "preventWDAAttachments": true,
+    "usePrebuiltWDA": true,
+    "clearSystemFiles": true,
+    "shouldUseSingletonTestManager": false,
+    "simpleIsVisibleCheck": true,
+    "maxTypingFrequency": 10
+  },
+  "hostMachines": [
+    {
+      "machineIP": "127.0.0.1",
+      "appiumServerPath": "/opt/homebrew/lib/node_modules/appium",
+      "emulators": [
+        {
+          "deviceName": "Pixel 4",
+          "OS": "10.0"
+        },
+        {
+          "deviceName": "Pixel 6 Pro",
+          "OS": "13.0"
+        }
+        
+      ]
+    }
+  ]
+}
