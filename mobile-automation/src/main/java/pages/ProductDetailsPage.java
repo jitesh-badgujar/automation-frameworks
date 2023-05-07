@@ -24,8 +24,7 @@ public class ProductDetailsPage extends BasePage {
 		/*
 		 * Return currently added product for further validation
 		 * 
-		 * Product currentProduct = new Product(); By priceValue =
-		 * AppUtils.getByResourceId("");
+		 * Product currentProduct = new Product(); 
 		 * 
 		 * String price = driver.findElement(priceText).getText();
 		 * 
