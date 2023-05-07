@@ -44,6 +44,13 @@ public class StepDefs extends BaseTest {
 	@When("I add product to the cart")
 	public void i_add_product_to_the_cart() {
 		productDetailsPage.addProductToCart();
+		/*
+		 * Here we can store details of product added so later we can validate.
+		 * 
+		 * List<Product> productsAddedToCart = new ArrayList<Product>();
+		 * productsAddedToCart.add(currentProduct);
+		 * 
+		 */
 	}
 
 	@When("I go to the cart")
@@ -61,9 +68,18 @@ public class StepDefs extends BaseTest {
 	public void i_should_see_total_updated_correctly() {
 		/*
 		 * Total value is dynamic hence just making sure that value is shown and
-		 * contains currency. This Could be improved by making API call to get the
-		 * correct price. Or If we are using static/known test data for Products then
-		 * can be asserted accordingly.
+		 * contains currency. This could be improved by making API call to get the
+		 * correct price.
+		 * 
+		 * Or If we are using static/known test data for Products then can be asserted
+		 * accordingly.
+		 * 
+		 * Or While adding products to the cart, we can save product details in the list
+		 * And then calculate sum of all products like -
+		 * 
+		 * Double sum = productsAddedToCart.stream().collect(Collectors.summingDouble(Product::getPrice));
+		 * Assert.assertEquals("$" + sum, total);
+		 * 
 		 */
 		String total = cartPage.getTotalPrice();
 		Assert.assertTrue(total.contains("$"), "Total is missing currency: " + total);
