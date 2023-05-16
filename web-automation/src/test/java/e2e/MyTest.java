@@ -9,15 +9,15 @@ import pages.LoginPage;
 import utils.BaseTest;
 
 public class MyTest extends BaseTest {
-	@Test(description = "Test 1 Details")
-	public void test1() {
+	@Test(description = "Verify user can login with valid credentials")
+	public void validLoginTest() {
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = loginPage.LoginAs(UserFactory.getStandardUser());
 		assertTrue(homePage.isHomePageShown(), "Home Page not shown");
 	}
 
-	@Test(description = "Test 2 Details")
-	public void test2() {
+	@Test(description = "Verify user can not login with invalid credentials")
+	public void inValidLoginTest() {
 		LoginPage loginPage = new LoginPage();
 		loginPage.LoginAs(UserFactory.getInvalidUser());
 		assertEquals(loginPage.getErrorMessage(),
