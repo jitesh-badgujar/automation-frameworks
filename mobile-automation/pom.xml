@@ -5,6 +5,10 @@
 	<groupId>com.myorg.automation</groupId>
 	<artifactId>mobile-automation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.saikrishna321</groupId>
